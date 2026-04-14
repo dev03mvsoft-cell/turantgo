@@ -1,0 +1,27 @@
+# Disable directory listing
+Options -Indexes
+
+# Block all script execution
+RemoveHandler .php .phtml .php3 .php4 .php5 .php7 .phps .pl .py .jsp .asp .sh .cgi
+RemoveType .php .phtml .php3 .php4 .php5 .php7 .phps .pl .py .jsp .asp .sh .cgi
+
+# Block access to all files by default
+<FilesMatch ".*">
+    Require all denied
+</FilesMatch>
+
+# Allow only PDF files to be downloaded
+<FilesMatch "\.pdf$">
+    Require all granted
+</FilesMatch>
+
+# Block access to .htaccess itself
+<Files ".htaccess">
+    Require all denied
+</Files>
+
+# Block common hacking bots and bad user agents
+SetEnvIfNoCase User-Agent "(curl|wget|python|libwww|scan|bot|spider|scrapy|ahrefs|semrush|mj12bot|dotbot|screaming frog|crawler|seo|scraper)" bad_bot
+Order Allow,Deny
+Allow from all
+Deny from env=bad_bot
