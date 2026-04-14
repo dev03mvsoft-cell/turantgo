@@ -96,7 +96,7 @@
                       <h4>Send Us a Message</h4>
 
                       <div class="request-quote-form">
-                          <form action="/contact_handler.php" method="POST" id="contact-form">
+                          <form action="/handlers/contact_handler.php" method="POST" id="contact-form">
 
                               <!-- Honeypot fields -->
                               <input type="text" name="website" style="display:none;">

@@ -319,7 +319,7 @@
 
                 <div class="application-form-wrapper">
                     <h4 class="fw-bold text-dark mb-4">Let's Connect</h4>
-                    <form action="/carrers_application.php" method="POST" enctype="multipart/form-data" id="career-form">
+                    <form action="/handlers/carrers_application.php" method="POST" enctype="multipart/form-data" id="career-form">
 
                         <!-- Honeypot -->
                         <input type="text" name="website" style="display:none !important; visibility:hidden; height:0;">

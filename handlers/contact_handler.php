@@ -1,12 +1,12 @@
 <?php
-require_once(__DIR__ . '/includes/security.php');
+require_once(dirname(__DIR__) . '/includes/security.php');
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require __DIR__ . '/PHPMailer/Exception.php';
-require __DIR__ . '/PHPMailer/PHPMailer.php';
-require __DIR__ . '/PHPMailer/SMTP.php';
+require dirname(__DIR__) . '/PHPMailer/Exception.php';
+require dirname(__DIR__) . '/PHPMailer/PHPMailer.php';
+require dirname(__DIR__) . '/PHPMailer/SMTP.php';
 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
